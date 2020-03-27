@@ -36,14 +36,10 @@ public class ModItems {
 	@SubscribeEvent
 	  public static void registerItemRenders(ModelRegistryEvent event)
 	  {
-	    registerRender(new ItemBlock(ModBlocks.blockSpawnerInvisible).getItemFromBlock(ModBlocks.blockSpawnerInvisible));
-	    registerRender(new ItemBlock(ModBlocks.blockLegendarySpawner).getItemFromBlock(ModBlocks.blockLegendarySpawner));
-	    registerRender(new ItemBlock(ModBlocks.blockLegendarySpawnerInvisible).getItemFromBlock(ModBlocks.blockLegendarySpawnerInvisible));
-	    
+		
         registerRender(Item.getItemFromBlock(ModBlocks.blockSpawnerInvisible));
         registerRender(Item.getItemFromBlock(ModBlocks.blockLegendarySpawner));
         registerRender(Item.getItemFromBlock(ModBlocks.blockLegendarySpawnerInvisible));
-        
 
 	  }
 	
