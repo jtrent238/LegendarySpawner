@@ -1,9 +1,9 @@
-package com.jtrent238.lengendaryspawner.proxy;
+package com.jtrent238.legendaryspawner.proxy;
 
 import java.io.File;
 
-import com.jtrent238.lengendaryspawner.Config;
-import com.jtrent238.lengendaryspawner.Main;
+import com.jtrent238.legendaryspawner.Config;
+import com.jtrent238.legendaryspawner.Main;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;

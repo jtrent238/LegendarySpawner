@@ -1,4 +1,4 @@
-package com.jtrent238.lengendaryspawner;
+package com.jtrent238.legendaryspawner;
 
 
 import java.io.BufferedWriter;
@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
-import com.jtrent238.lengendaryspawner.proxy.CommonProxy;
+import com.jtrent238.legendaryspawner.proxy.CommonProxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -29,13 +29,13 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.MODVERSION/*, dependencies = "required-after:jtcoremod@[2.0.0.3,)"*/, useMetadata = true)
 public class Main {
 
-    public static final String MODID = "lengendaryspawner";
+    public static final String MODID = "legendaryspawner";
 	public static final String MODNAME = "Legendary Spawner";
 	public static final String MODAUTHOR = "jtrent238";
 	public static final String MODVERSION = "1.0.0.0-indev";
 	public static final String MC = "1.12.2";
 	
-  @SidedProxy(clientSide = "com.jtrent238.lengendaryspawner.proxy.ClientProxy", serverSide = "com.jtrent238.lengendaryspawner.proxy.ServerProxy")
+  @SidedProxy(clientSide = "com.jtrent238.legendaryspawner.proxy.ClientProxy", serverSide = "com.jtrent238.legendaryspawner.proxy.ServerProxy")
     public static CommonProxy proxy;
 
   @Mod.Instance
@@ -52,7 +52,6 @@ public class Main {
   @Mod.EventHandler
   public void init(FMLInitializationEvent e, ModelRegistryEvent mre, RegistryEvent.Register<Block> rb){
       proxy.init(e);
-      //ModelRegistryHandler.registerModels(mre);
       ModItems.registerItemRenders(mre);
       ModBlocks.registerBlocks(rb);
       //ModRecipes.registerRecpies();

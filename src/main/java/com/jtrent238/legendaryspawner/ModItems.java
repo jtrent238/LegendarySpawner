@@ -1,4 +1,4 @@
-package com.jtrent238.lengendaryspawner;
+package com.jtrent238.legendaryspawner;
 
 
 import net.minecraft.block.Block;
@@ -19,6 +19,8 @@ public class ModItems {
 
 	
 	
+	private static ModelRegistryEvent mre;
+
 	@SubscribeEvent
 	  public static void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(new Item [] {
@@ -28,13 +30,21 @@ public class ModItems {
 				(Item)new ItemBlock(ModBlocks.blockLegendarySpawnerInvisible).setRegistryName(ModBlocks.blockLegendarySpawnerInvisible.getRegistryName()), 
 				
 		});
-		registerItemRenders(null);
+		registerItemRenders(mre);
 	}
 
 	@SubscribeEvent
 	  public static void registerItemRenders(ModelRegistryEvent event)
 	  {
-	    //registerRender(dorito_chip_nachocheese);
+	    registerRender(new ItemBlock(ModBlocks.blockSpawnerInvisible).getItemFromBlock(ModBlocks.blockSpawnerInvisible));
+	    registerRender(new ItemBlock(ModBlocks.blockLegendarySpawner).getItemFromBlock(ModBlocks.blockLegendarySpawner));
+	    registerRender(new ItemBlock(ModBlocks.blockLegendarySpawnerInvisible).getItemFromBlock(ModBlocks.blockLegendarySpawnerInvisible));
+	    
+        registerRender(Item.getItemFromBlock(ModBlocks.blockSpawnerInvisible));
+        registerRender(Item.getItemFromBlock(ModBlocks.blockLegendarySpawner));
+        registerRender(Item.getItemFromBlock(ModBlocks.blockLegendarySpawnerInvisible));
+        
+
 	  }
 	
 	public static void registerRender(Item item) {
@@ -42,7 +52,6 @@ public class ModItems {
 		   
 			   if(Config.debugMode == true) {
 		       	System.out.println("Registered Model for: " + item.getRegistryName());
-		       	//System.out.println("Registered Model for: " + ItemWoodHammer.registryName);
 	   		}
 		}
 }

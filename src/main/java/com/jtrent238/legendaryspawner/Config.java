@@ -1,8 +1,8 @@
-package com.jtrent238.lengendaryspawner;
+package com.jtrent238.legendaryspawner;
 
 import org.apache.logging.log4j.Level;
 
-import com.jtrent238.lengendaryspawner.proxy.CommonProxy;
+import com.jtrent238.legendaryspawner.proxy.CommonProxy;
 
 import net.minecraftforge.common.config.Configuration;
 

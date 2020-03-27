@@ -1,4 +1,4 @@
-package com.jtrent238.lengendaryspawner.proxy;
+package com.jtrent238.legendaryspawner.proxy;
 
 public class ServerProxy extends CommonProxy{
 

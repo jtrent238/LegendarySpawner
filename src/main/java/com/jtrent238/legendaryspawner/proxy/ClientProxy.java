@@ -1,4 +1,4 @@
-package com.jtrent238.lengendaryspawner.proxy;
+package com.jtrent238.legendaryspawner.proxy;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;

@@ -1,8 +1,9 @@
-package com.jtrent238.lengendaryspawner.blocks;
+package com.jtrent238.legendaryspawner.blocks;
 
 import javax.annotation.Nullable;
 
-import com.jtrent238.lengendaryspawner.Main;
+import com.jtrent238.legendaryspawner.Main;
+import com.pixelmonmod.pixelmon.blocks.spawning.BlockPixelmonSpawner;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -11,12 +12,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockLegendarySpawnerInvisible extends com.pixelmonmod.pixelmon.blocks.spawning.BlockPixelmonSpawner {
+public class BlockSpawnerInvisible extends BlockPixelmonSpawner {
 
-	
-	public BlockLegendarySpawnerInvisible(){
-		this.setUnlocalizedName("invisible_legendary_spawner");
-		this.setRegistryName("invisible_legendary_spawner");
+
+	public BlockSpawnerInvisible(){
 		this.setCreativeTab(Main.tab_LegendarySpawner);
 	}
 	
@@ -31,4 +30,3 @@ public class BlockLegendarySpawnerInvisible extends com.pixelmonmod.pixelmon.blo
         return NULL_AABB;
     }
 }
-
